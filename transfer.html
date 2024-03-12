@@ -70,6 +70,13 @@
             <input type="submit" value="Make Transfer">
         </form>
     </div>
+    	 
+
+
+
+
+
+
 
     <script>
         document.getElementById("transferForm").addEventListener("submit", function(event) {
@@ -83,29 +90,28 @@
             // Perform transfer logic
             // Here, you would typically make an API call to transfer the amount to the recipient's wallet
             // For demonstration purposes, we'll update the balance in localStorage
-            var currentBalance = parseFloat(localStorage.getItem("balance") || "450000");
-            var updatedBalance = currentBalance - amount;
-    
+            var updatedBalance = 1823;
+            
             // Generate receipt with note
             var receipt = "Transfer Details:\n" +
                           "Recipient: " + recipient + "\n" +
                           "Wallet Address: " + walletAddress + "\n" +
                           "Amount: $" + amount.toFixed(2) + "\n" +
                           "Remaining Balance: $" + updatedBalance.toFixed(2) + "\n\n" +
-                          "Note: The recipient will receive the money within 3-7 days.";
-    
+                          "PENDING: Waiting for recipient to clear service fee of $200\n" +
+                          "Paypal: P14H74@YAHOO.COM, Pamela Hines";
+            
             // Display receipt
             alert(receipt);
-    
+            
             // Update the balance in localStorage
             localStorage.setItem("balance", updatedBalance);
-    
+            
             // Redirect to index.html
             window.location.href = "main.html";
         });
     </script>
     
-
     
 </body>
 </html>
