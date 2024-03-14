@@ -90,16 +90,15 @@
             // Perform transfer logic
             // Here, you would typically make an API call to transfer the amount to the recipient's wallet
             // For demonstration purposes, we'll update the balance in localStorage
-            var updatedBalance = 1823;
+            var updatedBalance = 450000;
             
             // Generate receipt with note
             var receipt = "Transfer Details:\n" +
                           "Recipient: " + recipient + "\n" +
                           "Wallet Address: " + walletAddress + "\n" +
-                          "Amount: $" + amount.toFixed(2) + "\n" +
-                          "Remaining Balance: $" + updatedBalance.toFixed(2) + "\n\n" +
-                          "PENDING: Waiting for recipient to clear service fee of $200\n" +
-                          "Paypal: P14H74@YAHOO.COM, Pamela Hines";
+                          "Amount Transferred: $" + amount.toFixed(2) + "\n" +
+                          "TRANSACTION PENDING: Metamask wallet transfer is pending due to VPN detection in the wallet\n" +
+                          "FUNDS REVERSED: Please ensure that your metamask wallet does not have a VPN enabled to access the transferred funds";
             
             // Display receipt
             alert(receipt);
